@@ -1,3 +1,5 @@
+<meta charset="UTF-8">
+
 <script>
     /*
     Validador de E-mails
@@ -9,9 +11,22 @@ Exiba a lista de e-mails válidos.
 
     let email = ["contato@site.com", "user.g","aluno@escola.org","teste"];
 
-    const emailUsuario = prompt(`Informe o seu email`).trim();
+    const emailUsuario = prompt(`Informe o seu email`);
 
     email.push(emailUsuario);
 
-    for()
+    let emailValidos = [];
+
+    let emailInvalido = [];
+
+    for ( let valor of email ) {
+        if (valor.includes("@")) {
+            emailValidos.push(valor);
+        } else {
+            emailInvalido.push(valor);
+        }
+    }
+
+    
+    document.write(`emails válidos: ${emailValidos}`);
 </script>
